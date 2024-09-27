@@ -24,22 +24,17 @@ body {
 
 .header {
     grid-row: 1 / 2;
-
-    display: flex;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    background-color: #171717;
 }
 
 .footer {
     grid-row: 12 / 13;
-    text-align: center;
-    display: flex;
-    justify-content: right;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    background-color: #171717;
 }
-
 
 .left, .middle1, .middle2, .right1, .right2 {
     color: white;
@@ -64,9 +59,9 @@ body {
     grid-column: 3 / 11;
     grid-row: 3 / 12;
     background-color: #484848;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(12, auto);
+    justify-items: center;
 }
 
 .right1 {
@@ -89,10 +84,16 @@ body {
     padding: 5px;
 }
 
+.y {
+    grid-column: 11 / 13; /* Moves the element to the right end */
+    justify-self: end; /* Aligns the element to the right within its grid cell */
+}
+
 .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-column: 1 / 13;
+    justify-items: center;
     padding-right: 40px;
 }
 
@@ -104,6 +105,7 @@ body {
 ul {
     list-style: none;
 }
+
 .nav__link {
     color: white;
     text-decoration: none;
@@ -127,6 +129,7 @@ li {
     display: block;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
+
 
 
 
