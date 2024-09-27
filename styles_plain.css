@@ -41,7 +41,7 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
     position: absolute;
-    box-sizing: border-box; /* ensure padding doesn't add extra space */
+    box-sizing: border-box; /* padding stops adding extra space */
     overflow: auto; /* enable scrolling inside each container */
 }
 
@@ -119,8 +119,8 @@ body {
 }
 
 .nav {
-    padding-right: 40px;
-    text-align: center;
+    padding-left: 80px;
+    text-align: left;
 }
 
 .nav__text {
