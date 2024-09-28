@@ -7,6 +7,7 @@ body {
     font-family: Montserrat, sans-serif;
     background-color: #484848;
     margin: 0;
+
 }
 
 .container {
@@ -42,11 +43,15 @@ body {
 }
 
 .left {
-    flex: 0 0 16.66%;
+    flex: 0 1 16.66%; /* Flex-grow 0, flex-shrink 1, initial size 16.66% */
     background-color: #282828;
     color: white;
     padding: 20px;
+    min-width: 150px; /* Define a minimum width so it doesn't shrink too small */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    overflow-wrap: break-word; /* Allow text to break within words */
 }
+
 
 .content {
     display: flex;
