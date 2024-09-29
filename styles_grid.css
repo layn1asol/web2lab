@@ -18,29 +18,25 @@ body {
 }
 
 .header, .footer {
+    display: grid;
     grid-column: 1 / 13;
     background-color: #171717;
+    overflow: hidden;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .header {
     grid-row: 1 / 2;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
 }
 
 .footer {
     grid-row: 12 / 13;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    overflow: hidden; /* Prevents overflow of the container */
 }
 
 .left, .middle1, .middle2, .right1, .right2 {
     color: white;
     padding: 20px;
-    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
@@ -57,11 +53,11 @@ body {
 }
 
 .middle2 {
+    display: grid;
     grid-column: 3 / 11;
     grid-row: 3 / 12;
-    background-color: #484848;
-    display: grid;
     grid-template-rows: repeat(12, auto);
+    background-color: #484848;
     justify-items: center;
 }
 
@@ -83,28 +79,14 @@ body {
     width: max-content;
     padding: 5px;
     margin: 30px;
-
-    max-width: 100%; /* Prevents text from going out of bounds */
-    overflow: hidden; /* Ensures text does not overflow the container */
-    white-space: nowrap; /* Prevents text from wrapping */
-    word-wrap: normal; /* Ensures no word wrapping */
-
 }
+
 .y {
     grid-column: 11 / 13;
     justify-self: end;
 }
 
-.nav {
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center the navigation links */
-    padding-right: 40px;
-    width: 100%; /* Occupy full width of the container */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-}
-
 .nav__text {
-    padding-top: 0;
     margin-top: 0;
 }
 
@@ -117,11 +99,7 @@ ul {
     text-decoration: none;
     transition: color 0.2s linear;
     font-size: 30px;
-    margin-top: 20px;
-    text-align: center; /* Center text within each link */
-    overflow-wrap: break-word; /* Handle overflow situations */
-    padding: 5px; /* Add padding for better spacing */
-    width: 100%; /* Links occupy full width of container */
+    padding: 5px;
 }
 
 li {
@@ -137,7 +115,6 @@ li {
     margin-top: 20px;
     max-width: 100%;
     display: block;
-
 }
 
 
