@@ -34,6 +34,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    overflow: hidden; /* Prevents overflow of the container */
 }
 
 .left, .middle1, .middle2, .right1, .right2 {
@@ -79,22 +80,27 @@ body {
 .x, .y {
     background-color: #484848;
     color: #9b82ff;
-    margin: 30px;
     width: max-content;
     padding: 5px;
-}
+    margin: 30px;
 
+    max-width: 100%; /* Prevents text from going out of bounds */
+    overflow: hidden; /* Ensures text does not overflow the container */
+    white-space: nowrap; /* Prevents text from wrapping */
+    word-wrap: normal; /* Ensures no word wrapping */
+
+}
 .y {
     grid-column: 11 / 13;
-    justify-self: end; /* aligns the element to the right */
+    justify-self: end;
 }
 
 .nav {
-    display: grid;
-    grid-template-rows: repeat(6, auto);
-    grid-column: 1 / 13;
-    justify-items: center;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center the navigation links */
     padding-right: 40px;
+    width: 100%; /* Occupy full width of the container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 .nav__text {
@@ -112,6 +118,10 @@ ul {
     transition: color 0.2s linear;
     font-size: 30px;
     margin-top: 20px;
+    text-align: center; /* Center text within each link */
+    overflow-wrap: break-word; /* Handle overflow situations */
+    padding: 5px; /* Add padding for better spacing */
+    width: 100%; /* Links occupy full width of container */
 }
 
 li {
